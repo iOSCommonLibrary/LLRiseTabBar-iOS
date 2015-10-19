@@ -1,3 +1,5 @@
+# 这是原作者@NoCodeNoWife分享的 我添加了新的LLRiseTabBarDemo2，比之前的实现更简单。
+#原地址https://github.com/NoCodeNoWife/LLRiseTabBar-iOS
 # LLRiseTabBar-iOS
 仿淘宝闲鱼的TabBar (Objective-C 实现)
 
