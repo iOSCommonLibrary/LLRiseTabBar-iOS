@@ -59,13 +59,14 @@
     
     
     //设置中间的tabBarItem 这个可以随便自定义
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake((tabbarController.tabBar.bounds.size.width-55)/2, tabbarController.tabBar.bounds.size.height - 72, 55, 72)];
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake((tabbarController.tabBar.bounds.size.width-120)/2, tabbarController.tabBar.bounds.size.height - 80, 120, 80)];
     button.imageView.contentMode = UIViewContentModeScaleAspectFit;
     [button setImage:[UIImage imageNamed:@"post_normal"] forState:UIControlStateNormal];
     [tabbarController.tabBar addSubview:button];
     [tabbarController.tabBar bringSubviewToFront:button];
     
     [button addTarget:self action:@selector(tabBarDidSelectedRiseButton) forControlEvents:UIControlEventTouchUpInside];
+    
     for (UITabBarItem *tbi in tabbarController.tabBar.items) {
         tbi.image = [tbi.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         tbi.selectedImage = [tbi.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
