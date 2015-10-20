@@ -32,6 +32,8 @@
 	LLMessageViewController *messageViewController = [[LLMessageViewController alloc] init];
 	LLMineViewController *mineViewController = [[LLMineViewController alloc] init];
     LYSpaceVC *spaceVC = [[LYSpaceVC alloc] init];
+    spaceVC.tabBarItem.enabled = NO;
+    spaceVC.tabBarItem.title = nil;
     [homeViewController.tabBarItem setTitle:@"首页"];
     [homeViewController.tabBarItem setImage:[UIImage imageNamed:@"home_normal"]];
     [homeViewController.tabBarItem setSelectedImage:[UIImage imageNamed:@"home_highlight"]];
@@ -54,12 +56,15 @@
     
     //去掉上部的黑色线条，
     //如果加上黑色线条的话可以这样。view自定义高度为1，宽度为tabBar的宽度 [tabbarController.tabBar addSubview:view];
-	[[UITabBar appearance] setBackgroundImage:[UIImage imageWithLYColor:[UIColor groupTableViewBackgroundColor]]];
-	[[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
-    
+	[[UITabBar appearance] setBackgroundImage:[UIImage imageWithLYColor:[UIColor clearColor]]];
+	[[UITabBar appearance] setShadowImage:[UIImage new]];
+    UIView *topLineView = [[UIView alloc] init];
+    topLineView.frame = CGRectMake(0, 0, CGRectGetWidth(tabbarController.tabBar.bounds), 1);
+    topLineView.backgroundColor = [UIColor colorWithWhite:0.966 alpha:1.000];
+    [tabbarController.tabBar addSubview:topLineView];
     
     //设置中间的tabBarItem 这个可以随便自定义
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake((tabbarController.tabBar.bounds.size.width-120)/2, tabbarController.tabBar.bounds.size.height - 80, 120, 80)];
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake((tabbarController.tabBar.bounds.size.width-55)/2, tabbarController.tabBar.bounds.size.height - 100, 55, 100)];
     button.imageView.contentMode = UIViewContentModeScaleAspectFit;
     [button setImage:[UIImage imageNamed:@"post_normal"] forState:UIControlStateNormal];
     [tabbarController.tabBar addSubview:button];
