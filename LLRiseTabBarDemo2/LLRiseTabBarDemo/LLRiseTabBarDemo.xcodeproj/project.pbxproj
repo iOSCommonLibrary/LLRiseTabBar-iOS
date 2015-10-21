@@ -383,12 +383,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LLRiseTabBarDemo/LLRiseTabBarDemo.pch";
 				INFOPLIST_FILE = LLRiseTabBarDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lz",
-					"-framework",
-					Reveal,
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.melody.LLRiseTabBarDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -406,12 +401,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LLRiseTabBarDemo/LLRiseTabBarDemo.pch";
 				INFOPLIST_FILE = LLRiseTabBarDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lz",
-					"-framework",
-					Reveal,
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.melody.LLRiseTabBarDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
