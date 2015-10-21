@@ -7,14 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "LYTabBarController.h"
 
 
-#import "LLHomeViewController.h"
-#import "LLSameCityViewController.h"
-#import "LLMessageViewController.h"
-#import "LLMineViewController.h"
-#import "LYSpaceVC.h"
-#import "UIImage+LYColor.h"
 @interface AppDelegate () <UIActionSheetDelegate>
 
 @end
@@ -26,82 +21,12 @@
 	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	self.window.backgroundColor = [UIColor whiteColor];
 	[self.window makeKeyAndVisible];
-	
-	LLHomeViewController *homeViewController = [[LLHomeViewController alloc] init];
-	LLSameCityViewController *sameCityViewController = [[LLSameCityViewController alloc] init];
-	LLMessageViewController *messageViewController = [[LLMessageViewController alloc] init];
-	LLMineViewController *mineViewController = [[LLMineViewController alloc] init];
-    LYSpaceVC *spaceVC = [[LYSpaceVC alloc] init];
-    spaceVC.tabBarItem.enabled = NO;
-    spaceVC.tabBarItem.title = nil;
-    [homeViewController.tabBarItem setTitle:@"首页"];
-    [homeViewController.tabBarItem setImage:[UIImage imageNamed:@"home_normal"]];
-    [homeViewController.tabBarItem setSelectedImage:[UIImage imageNamed:@"home_highlight"]];
-    
-    [sameCityViewController.tabBarItem setTitle:@"同城"];
-    [sameCityViewController.tabBarItem setImage:[UIImage imageNamed:@"mycity_normal"]];
-    [sameCityViewController.tabBarItem setSelectedImage:[UIImage imageNamed:@"mycity_highlight"]];
-    
-    [messageViewController.tabBarItem setTitle:@"消息"];
-    
-    [messageViewController.tabBarItem setImage:[UIImage imageNamed:@"home_normal"]];
-    [messageViewController.tabBarItem setSelectedImage:[UIImage imageNamed:@"home_highlight"]];
-    
-    [mineViewController.tabBarItem setTitle:@"我的"];
-    [mineViewController.tabBarItem setImage:[UIImage imageNamed:@"home_normal"]];
-    [mineViewController.tabBarItem setSelectedImage:[UIImage imageNamed:@"home_highlight"]];
-	
-	UITabBarController *tabbarController = [[UITabBarController alloc] init];
-	tabbarController.viewControllers = @[homeViewController, sameCityViewController, spaceVC, messageViewController, mineViewController];
-    
-    //去掉上部的黑色线条，
-    //如果加上黑色线条的话可以这样。view自定义高度为1，宽度为tabBar的宽度 [tabbarController.tabBar addSubview:view];
-	[[UITabBar appearance] setBackgroundImage:[UIImage imageWithLYColor:[UIColor clearColor]]];
-	[[UITabBar appearance] setShadowImage:[UIImage new]];
-    UIView *topLineView = [[UIView alloc] init];
-    topLineView.frame = CGRectMake(0, 0, CGRectGetWidth(tabbarController.tabBar.bounds), 1);
-    topLineView.backgroundColor = [UIColor colorWithWhite:0.966 alpha:1.000];
-    [tabbarController.tabBar addSubview:topLineView];
-    
-    //设置中间的tabBarItem 这个可以随便自定义
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake((tabbarController.tabBar.bounds.size.width-55)/2, tabbarController.tabBar.bounds.size.height - 100, 55, 100)];
-    button.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [button setImage:[UIImage imageNamed:@"post_normal"] forState:UIControlStateNormal];
-    [tabbarController.tabBar addSubview:button];
-    [tabbarController.tabBar bringSubviewToFront:button];
-    
-    [button addTarget:self action:@selector(tabBarDidSelectedRiseButton) forControlEvents:UIControlEventTouchUpInside];
-    
-    for (UITabBarItem *tbi in tabbarController.tabBar.items) {
-        tbi.image = [tbi.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        tbi.selectedImage = [tbi.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    }
-	
-	
-	self.window.rootViewController = tabbarController;
+	self.window.rootViewController = [[LYTabBarController alloc] init];
 	
 	return YES;
 }
 
-#pragma mark - LLTabBarDelegate
 
-- (void)tabBarDidSelectedRiseButton {
-	UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-	UIViewController *viewController = tabBarController.selectedViewController;
-	
-	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
-															 delegate:self
-													cancelButtonTitle:@"取消"
-											   destructiveButtonTitle:nil
-													otherButtonTitles:@"拍照", @"从相册选取", @"淘宝一键转卖", nil];
-	[actionSheet showInView:viewController.view];
-}
-
-#pragma mark - UIActionSheetDelegate
-
-- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
-	NSLog(@"buttonIndex = %ld", buttonIndex);
-}
 
 #pragma mark -
 

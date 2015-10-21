@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C95AEFD1BD53E370016B102 /* LYSpaceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C95AEFC1BD53E370016B102 /* LYSpaceVC.m */; settings = {ASSET_TAGS = (); }; };
 		5C95AF001BD53F820016B102 /* UIImage+LYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C95AEFF1BD53F820016B102 /* UIImage+LYColor.m */; settings = {ASSET_TAGS = (); }; };
+		5CD07CB31BD72BC0000EA23B /* LYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD07CB21BD72BC0000EA23B /* LYTabBarController.m */; settings = {ASSET_TAGS = (); }; };
 		820978E81BD3A37600CF9D0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 820978E71BD3A37600CF9D0C /* main.m */; };
 		820978EB1BD3A37700CF9D0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 820978EA1BD3A37700CF9D0C /* AppDelegate.m */; };
 		820978F31BD3A37700CF9D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820978F21BD3A37700CF9D0C /* Assets.xcassets */; };
@@ -28,6 +29,8 @@
 		5C95AEFC1BD53E370016B102 /* LYSpaceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSpaceVC.m; sourceTree = "<group>"; };
 		5C95AEFE1BD53F820016B102 /* UIImage+LYColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LYColor.h"; sourceTree = "<group>"; };
 		5C95AEFF1BD53F820016B102 /* UIImage+LYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LYColor.m"; sourceTree = "<group>"; };
+		5CD07CB11BD72BC0000EA23B /* LYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTabBarController.h; sourceTree = "<group>"; };
+		5CD07CB21BD72BC0000EA23B /* LYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTabBarController.m; sourceTree = "<group>"; };
 		820978E31BD3A37600CF9D0C /* LLRiseTabBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLRiseTabBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		820978E71BD3A37600CF9D0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		820978E91BD3A37700CF9D0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CD07CB01BD72B8B000EA23B /* main */ = {
+			isa = PBXGroup;
+			children = (
+				5CD07CB11BD72BC0000EA23B /* LYTabBarController.h */,
+				5CD07CB21BD72BC0000EA23B /* LYTabBarController.m */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
 		820978DA1BD3A37600CF9D0C = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +98,7 @@
 				820978FD1BD3A94100CF9D0C /* ViewController */,
 				820978E91BD3A37700CF9D0C /* AppDelegate.h */,
 				820978EA1BD3A37700CF9D0C /* AppDelegate.m */,
+				5CD07CB01BD72B8B000EA23B /* main */,
 				5C95AEFE1BD53F820016B102 /* UIImage+LYColor.h */,
 				5C95AEFF1BD53F820016B102 /* UIImage+LYColor.m */,
 				5C95AEFB1BD53E370016B102 /* LYSpaceVC.h */,
@@ -209,8 +222,9 @@
 		820978DB1BD3A37600CF9D0C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LY;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = melody;
+				ORGANIZATIONNAME = lichangwen;
 				TargetAttributes = {
 					820978E21BD3A37600CF9D0C = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -255,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CD07CB31BD72BC0000EA23B /* LYTabBarController.m in Sources */,
 				8209791F1BD3AFDB00CF9D0C /* LLSameCityViewController.m in Sources */,
 				820979071BD3AA9400CF9D0C /* LLBaseViewController.m in Sources */,
 				820979101BD3AB2800CF9D0C /* LLHomeViewController.m in Sources */,
