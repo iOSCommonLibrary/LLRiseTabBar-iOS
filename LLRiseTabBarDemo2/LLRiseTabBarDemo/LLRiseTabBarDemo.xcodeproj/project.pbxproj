@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C3986481BD94ABC0014BF9C /* LYTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3986461BD94ABC0014BF9C /* LYTestController.m */; settings = {ASSET_TAGS = (); }; };
+		5C3986491BD94ABC0014BF9C /* LYTestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C3986471BD94ABC0014BF9C /* LYTestController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C95AEFD1BD53E370016B102 /* LYSpaceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C95AEFC1BD53E370016B102 /* LYSpaceVC.m */; settings = {ASSET_TAGS = (); }; };
 		5C95AF001BD53F820016B102 /* UIImage+LYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C95AEFF1BD53F820016B102 /* UIImage+LYColor.m */; settings = {ASSET_TAGS = (); }; };
 		5CD07CB31BD72BC0000EA23B /* LYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD07CB21BD72BC0000EA23B /* LYTabBarController.m */; settings = {ASSET_TAGS = (); }; };
@@ -26,8 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C95AEFB1BD53E370016B102 /* LYSpaceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSpaceVC.h; sourceTree = "<group>"; };
-		5C95AEFC1BD53E370016B102 /* LYSpaceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSpaceVC.m; sourceTree = "<group>"; };
+		5C3986451BD94ABC0014BF9C /* LYTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTestController.h; sourceTree = "<group>"; };
+		5C3986461BD94ABC0014BF9C /* LYTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTestController.m; sourceTree = "<group>"; };
+		5C3986471BD94ABC0014BF9C /* LYTestController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYTestController.xib; sourceTree = "<group>"; };
+		5C95AEFB1BD53E370016B102 /* LYSpaceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LYSpaceVC.h; path = ../LYSpaceVC.h; sourceTree = "<group>"; };
+		5C95AEFC1BD53E370016B102 /* LYSpaceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LYSpaceVC.m; path = ../LYSpaceVC.m; sourceTree = "<group>"; };
 		5C95AEFE1BD53F820016B102 /* UIImage+LYColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LYColor.h"; sourceTree = "<group>"; };
 		5C95AEFF1BD53F820016B102 /* UIImage+LYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LYColor.m"; sourceTree = "<group>"; };
 		5CD07CB11BD72BC0000EA23B /* LYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTabBarController.h; sourceTree = "<group>"; };
@@ -106,8 +111,9 @@
 				5CD07CB01BD72B8B000EA23B /* main */,
 				5C95AEFE1BD53F820016B102 /* UIImage+LYColor.h */,
 				5C95AEFF1BD53F820016B102 /* UIImage+LYColor.m */,
-				5C95AEFB1BD53E370016B102 /* LYSpaceVC.h */,
-				5C95AEFC1BD53E370016B102 /* LYSpaceVC.m */,
+				5C3986451BD94ABC0014BF9C /* LYTestController.h */,
+				5C3986461BD94ABC0014BF9C /* LYTestController.m */,
+				5C3986471BD94ABC0014BF9C /* LYTestController.xib */,
 				820978F21BD3A37700CF9D0C /* Assets.xcassets */,
 				820978E61BD3A37600CF9D0C /* Supporting Files */,
 			);
@@ -127,6 +133,8 @@
 		820978FD1BD3A94100CF9D0C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5C95AEFB1BD53E370016B102 /* LYSpaceVC.h */,
+				5C95AEFC1BD53E370016B102 /* LYSpaceVC.m */,
 				820979041BD3AA9400CF9D0C /* Base */,
 				820979081BD3AB0600CF9D0C /* Home */,
 				820979091BD3AB0600CF9D0C /* Message */,
@@ -263,6 +271,7 @@
 				820978F31BD3A37700CF9D0C /* Assets.xcassets in Resources */,
 				8209791B1BD3AFAC00CF9D0C /* LLMineViewController.xib in Resources */,
 				820979161BD3AEA800CF9D0C /* LLMessageViewController.xib in Resources */,
+				5C3986491BD94ABC0014BF9C /* LYTestController.xib in Resources */,
 				820979111BD3AB2800CF9D0C /* LLHomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +285,7 @@
 			files = (
 				5CD07CB31BD72BC0000EA23B /* LYTabBarController.m in Sources */,
 				8209791F1BD3AFDB00CF9D0C /* LLSameCityViewController.m in Sources */,
+				5C3986481BD94ABC0014BF9C /* LYTestController.m in Sources */,
 				820979071BD3AA9400CF9D0C /* LLBaseViewController.m in Sources */,
 				820979101BD3AB2800CF9D0C /* LLHomeViewController.m in Sources */,
 				820978EB1BD3A37700CF9D0C /* AppDelegate.m in Sources */,

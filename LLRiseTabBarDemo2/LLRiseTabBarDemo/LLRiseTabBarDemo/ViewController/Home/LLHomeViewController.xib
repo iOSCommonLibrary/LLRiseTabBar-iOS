@@ -75,10 +75,20 @@
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNU-hQ-Xmk">
+                            <rect key="frame" x="283" y="297" width="34" height="30"/>
+                            <animations/>
+                            <state key="normal" title="push"/>
+                            <connections>
+                                <action selector="pushButtonAction:" destination="-1" eventType="touchUpInside" id="vUr-Xo-7yR"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="uNU-hQ-Xmk" firstAttribute="top" secondItem="ZKM-BB-3LZ" secondAttribute="bottom" constant="18.5" id="26n-IV-s0g"/>
+                        <constraint firstItem="uNU-hQ-Xmk" firstAttribute="centerX" secondItem="gsc-Q9-e9b" secondAttribute="centerX" id="NVA-rP-qwF"/>
                         <constraint firstItem="ZKM-BB-3LZ" firstAttribute="centerX" secondItem="gsc-Q9-e9b" secondAttribute="centerX" id="bKM-dl-vQH"/>
                         <constraint firstItem="ZKM-BB-3LZ" firstAttribute="centerY" secondItem="gsc-Q9-e9b" secondAttribute="centerY" id="h0S-7i-jW1"/>
                     </constraints>
